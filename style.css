@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  color: #1e1e1e;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.logo-img {
+  height: 50px; /* ajuste la taille selon ton image */
+  width: auto;
+  display: block;
+}
+/* Menu de navigation */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  display: flex;
+  padding: 5px 10px;
+  background-color: #000;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-align: center;
+  border-radius: 70%;
+}
+.nav-link:hover {
+  color: #ffffff;
+}
+.nav-link:nth-child(1):hover {
+  background-color: #4fa8e3; /* Bleu */
+}
+
+.nav-link:nth-child(2):hover {
+  background-color: #60c188; /* Vert */
+}
+
+.nav-link:nth-child(3):hover {
+  background-color: #ce9840; /* Jaune */
+}
+
+.nav-link:nth-child(4):hover {
+  background-color: #a97eb9; /* Violet */
+}
+
+.presentation-img{
+  height: 250px; 
+  width: auto;
+  display: flex;
+  align-items: center;
+} 
+.intro{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;     /* Centre verticalement si tu veux */
+  height: 100px;    
+} 
+.intro h2{
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  letter-spacing: 15px;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 7px solid black;
+  width: 0;
+  font-family: monospace;
+  font-size: 24px;
+  animation: typing 2s steps(26, end) forwards,  blink 0.7s step-end infinite; 
+}
+
+@keyframes typing {
+  to { width: 30ch; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+    100% { border-color: black; }
+  }
+
+.carousel-css {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.carousel-images {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+  border-radius: 30%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 300px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Images de fond */
+.img1 { background-image: url('portfolio/images/images1.jpg'); }
+.img2 { background-image: url('portfolio/images/images2.jpg'); }
+.img3 { background-image: url('portfolio/images/images3.JPG'); }
+
+/* Cacher les inputs */
+input[type="radio"] {
+  display: none;
+}
+
+/* Position des flèches */
+.carousel-arrows label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Afficher les bonnes flèches selon le slide */
+#slide1:checked ~ .carousel-arrows .prev { display: none; }
+#slide1:checked ~ .carousel-arrows .next { display: none; }
+#slide1:checked ~ .carousel-arrows .slide2.prev,
+#slide1:checked ~ .carousel-arrows .slide2.next {
+  display: block;
+}
+
+#slide2:checked ~ .carousel-arrows .slide3.prev,
+#slide2:checked ~ .carousel-arrows .slide3.next {
+  display: block;
+}
+
+#slide3:checked ~ .carousel-arrows .prev,
+#slide3:checked ~ .carousel-arrows .next {
+  display: block;
+}
+
+/* Translations */
+#slide1:checked ~ .carousel-images {
+  transform: translateX(0%);
+}
+#slide2:checked ~ .carousel-images {
+  transform: translateX(-100%);
+}
+#slide3:checked ~ .carousel-images {
+  transform: translateX(-200%);
+}
+.presentation h2{
+  text-align: center;
+  
+}
+.presentation p{
+ margin: 0% auto;
+  width:600px;
+  text-align: justify;
+}
+.categories {
+  display: flex;            
+  flex-direction: column;   
+  align-items: center;       
+  justify-content: center;  
+  text-align: center;        
+  width: 100%;               /* Si tu veux que le conteneur occupe toute la largeur */
+  max-width: 500px;          /* Optionnel : largeur maximale du conteneur */
+  margin: 0 auto;            /* Centre le conteneur s'il est plus petit que la page */
+  padding: 20px;             /* Ajoute de l'espace à l'intérieur du conteneur */
+}
+.categories ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.category {
+  background-color: #000000; /* Vert pour l'exemple */
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+  width: 200px;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category:hover {
+  background-color: #8da78e; /* Changement de couleur au survol */
+}
+.self-presentation h1{
+  margin: 0% auto;
+   width:600px;
+ }
+ .separation {
+  border: none; /* Supprime la bordure par défaut */
+  height: 1px; /* Hauteur de la ligne */
+  background-color: #000000; /* Couleur de la ligne */
+  width: 40%; /* La ligne occupe toute la largeur disponible */
+  margin-top: 5px; /* Marge au-dessus de la ligne */
+}
+.self-presentation p{
+  margin: 0% auto;
+   width:600px;
+   text-align: justify;
+   margin-bottom: 3%;
+ }
+ .self-presentation h4{
+  margin: 0% auto;
+  width:600px;
+  text-align: justify;
+  margin-bottom: 5%;
+  font-size: large;
+ }
+ .self-presentation h5{
+  margin: 0% auto;
+  width:600px;
+  text-align: justify;
+  margin-bottom: 5%;
+  font-size: large;
+ }
+
+
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #000000;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.gmail-icon-color {
+  display: none;
+}
+
+/* Spécial : afficher l'icône colorée de Gmail au survol */
+.gmail-link:hover .gmail-icon-gbw {
+  display: none;
+}
+
+.gmail-link:hover .gmail-icon-color {
+  display: block;
+}
