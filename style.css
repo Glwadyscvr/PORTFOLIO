@@ -154,20 +154,17 @@ input[type="radio"] {
 .next { right: 10px; }
 
 /* Afficher les bonnes flèches selon le slide */
-#slide1:checked ~ .carousel-arrows .prev { display: none; }
-#slide1:checked ~ .carousel-arrows .next { display: none; }
-#slide1:checked ~ .carousel-arrows .slide2.prev,
-#slide1:checked ~ .carousel-arrows .slide2.next {
+#slide1:checked ~ .carousel-arrows .next1 {
   display: block;
 }
 
-#slide2:checked ~ .carousel-arrows .slide1.prev,
-#slide2:checked ~ .carousel-arrows .slide3.next {
+#slide2:checked ~ .carousel-arrows .prev2,
+#slide2:checked ~ .carousel-arrows .next2 {
   display: block;
 }
 
-#slide3:checked ~ .carousel-arrows .prev,
-#slide3:checked ~ .carousel-arrows .next {
+#slide3:checked ~ .carousel-arrows .prev3,
+#slide3:checked ~ .carousel-arrows .next3 {
   display: block;
 }
 
@@ -278,7 +275,7 @@ input[type="radio"] {
   width:600px;
   text-align: center;
   margin-bottom: 0% auto;
-    margin-top: 4%;
+    margin-bottom: 0% auto;
   font-size: large;
  }
   .signature img{
