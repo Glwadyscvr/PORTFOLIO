@@ -125,9 +125,9 @@ body {
 }
 
 /* Images de fond */
-.img1 { background-image: url('portfolio/images/images1.jpg'); }
-.img2 { background-image: url('portfolio/images/images2.jpg'); }
-.img3 { background-image: url('portfolio/images/images3.JPG'); }
+.img1 { background-image: url('images/images1.jpg'); }
+.img2 { background-image: url('images/images2.jpg'); }
+.img3 { background-image: url('images/images3.JPG'); }
 
 /* Cacher les inputs */
 input[type="radio"] {
